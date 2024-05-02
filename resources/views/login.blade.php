@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <link rel="stylesheet" href="/resources/css/welcome.css">
+    <script src="/resources/js/app.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="logo">
+        <img src="/src/logo.png">
+    </div>
+
+    <div id="login">
+        <h1 class="title">Login</h1>
+        <p class="subtitle">Sign in to continue</p>
+        <div class="input-group">
+            <label class="inputTitle" for="username">Name</label>
+            <input type="text" id="username" v-model="username" required>
+        </div>
+        <div class="input-group">
+            <label class="inputTitle" for="password">Password</label>
+            <input type="password" id="password" v-model="password" required>
+        </div>
+        <button @click="login">Log in</button>
+        <p>{{ errorMessage }}</p>
+        <p>Don't have an account? <a href="register.html">Register</a></p>
+    </div>
+
+    <div class="trapezoid">
+    </div>
+
+
+</body>
+
+</html>
